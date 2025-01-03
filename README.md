@@ -43,7 +43,7 @@ A production-ready Express.js boilerplate with TypeScript, featuring robust secu
 ## Quick Start
 
 1. Clone the repository:
-   git clone <repository-url>
+   git clone <https://github.com/KinetoCebPac/express-ts-boilerplate.git>
    cd express-ts-boilerplate
 2. Install dependencies:
    npm install
