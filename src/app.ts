@@ -55,13 +55,21 @@ export const createApp = (): Application => {
     res.status(200).json({ status: 'ok' });
   });
 
-  // Error handling
-  app.use(errorHandler);
-
   // Index route
   app.get('/', (req, res) => {
     res.status(200).json({ message: 'Welcome to the API' });
   });
+
+  // Handle undefined routes
+  app.use('*', (req, res) => {
+    res.status(404).json({
+      status: 'error',
+      message: 'Route not found',
+    });
+  });
+
+  // Error handling
+  app.use(errorHandler);
 
   return app;
 };
