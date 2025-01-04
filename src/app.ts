@@ -59,7 +59,7 @@ export const createApp = (): Application => {
   app.use(errorHandler);
 
   // Index route
-  app.get('*', (req, res) => {
+  app.get('/', (req, res) => {
     res.status(200).json({ message: 'Welcome to the API' });
   });
 
